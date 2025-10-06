@@ -20,7 +20,7 @@ def analyze_log(file_path: str) -> dict:
     total = 0
     by_method = Counter({m: 0 for m in ALL_METHODS})
     by_ip = Counter()
-    # heap для топ-3: (duration, idx, payload)
+
     top3 = []
     idx = 0
 
