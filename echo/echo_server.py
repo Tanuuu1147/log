@@ -51,7 +51,7 @@ def _build_response(addr, method: str, path: str, status: HTTPStatus, headers_li
     ]
     for name, value in headers_list:
         body_lines.append(f"{name}: {value}")
-    body = "\n".join(body_lines).encode("utf-8")
+    body = "\r\n".join(body_lines).encode("utf-8")
 
     head_lines = [
         f"HTTP/1.1 {status.value} {status.phrase}",
